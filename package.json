@@ -25,6 +25,7 @@
     "test-compiled": "npm run prepublish && NODE_PATH=./lib mocha --compilers js:babel-register --recursive tests/src",
     "test-all": "npm test && for resolver in ./resolvers/*; do cd $resolver && npm test && cd ../..; done",
     "prepublish": "npm run build",
+    "prepare": "npm run build",
     "coveralls": "nyc report --reporter lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
